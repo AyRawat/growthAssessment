@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word Count Checker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Word Count Checker</h1>
+      </div>
+      <form id="form">
+        <label for="url">Enter website URL:</label>
+        <input type="text" id="url" placeholder="https://www.example.com" />
+        <button id="check-btn">Check</button>
+      </form>
+      <div id="invalid-url"></div>
+      <table id="results-table">
+        <thead>
+          <tr>
+            <th>Website</th>
+            <th>Word Count</th>
+            <th>Time</th>
+            <th>Fav</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

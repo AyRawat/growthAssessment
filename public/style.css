@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#invalid-url {
+  color: red;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-size: 48px;
+  color: #ff4500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+label {
+  color: #1a237e;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+/* Style the header */
+.header {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Style the input form */
+.form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.form label {
+  margin-right: 10px;
+}
+
+.form input {
+  width: 300px;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Style the table */
+table {
+  border-collapse: collapse;
+  margin-top: 30px;
+  width: 100%;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid black;
+}
+
+table td a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+table td button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table td button:hover {
+  background-color: #c82333;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #e3f2fd;
+}
+
+table th:first-child,
+table td:first-child {
+  padding-left: 0;
+}
+
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
+}
