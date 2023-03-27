@@ -54,7 +54,10 @@ form.addEventListener("submit", async (e) => {
         body: raw,
         redirect: "follow",
       };
-      fetch(`/api/saveInsights`, requestOptions)
+      fetch(
+        `https://website-word-counter.onrender.com/api/saveInsights`,
+        requestOptions
+      )
         .then((response) => response.json())
         .then((data) => {
           if (data.error) {
@@ -81,7 +84,10 @@ async function fetchAllHistory() {
     redirect: "follow",
   };
   results.splice(0, results.length);
-  return fetch("http://localhost:3000/api/listAll", requestOptions)
+  return fetch(
+    "https://website-word-counter.onrender.com/api/listAll",
+    requestOptions
+  )
     .then((response) => response.json())
     .then((domains) => {
       domains.map((domain) => {
@@ -103,6 +109,7 @@ async function fetchAllHistory() {
 async function updateTable() {
   await fetchAllHistory();
   resultsTable.innerHTML = ""; // clear existing rows
+
   results.forEach((result) => {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -162,7 +169,10 @@ async function updateFavorite(url) {
     redirect: "follow",
   };
 
-  fetch("http://localhost:3000/api/updateFavorite", requestOptions)
+  fetch(
+    "https://website-word-counter.onrender.com/api/updateFavorite",
+    requestOptions
+  )
     .then((response) => response.text())
     .then((result) => updateTable())
     .catch((error) => console.log("error", error));
@@ -182,7 +192,7 @@ function removeById(id) {
   };
 
   let deleteDomain = fetch(
-    "http://localhost:3000/api/deleteInsightById",
+    "https://website-word-counter.onrender.com/api/deleteInsightById",
     requestOptions
   )
     .then((response) => response.text())
